@@ -32,6 +32,14 @@ function get_slides() {
     }
   );
 
+    d3.select("#content")
+        .append("div")
+        .style("position", "absolute")
+        .style("left", "200px")
+        .style("top", "650px")
+        .text("Press any key to continue.")
+        .style("font-size", "25px");
+
   slide_funs.push(
     function() {
       d3.select("body")
