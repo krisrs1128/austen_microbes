@@ -263,7 +263,7 @@ function get_slides() {
 
       d3.select("#content")
         .selectAll(".callout")
-        // .style("max-width", "775px")
+        .style("max-width", "775px")
         .html("What's going on at the end of <i>Mansfield Park</i>?");
 
       d3.select("#content")
@@ -307,7 +307,7 @@ function get_slides() {
 
       d3.select("#content")
         .selectAll(".callout")
-        .style("max-width", "940px")
+        // .style("max-width", "940px")
         .html("The essential focus of both analysis are count matrices");
 
       d3.select("#content")
@@ -503,7 +503,7 @@ function bar_scales() {
       .range([40, -40]),
     "x": d3.scaleLinear()
       .domain(d3.extent(index))
-      .range([350, 900]),
+      .range([330, 970]),
     "fill": function(d) {
       if (d.sentiment > 0) {
         return "#7fc7c4";
@@ -889,7 +889,7 @@ function dtm_slide() {
   clear_austen();
 
   var columns = Object.keys(document_term[0]);
-  var scales = matrix_scales(columns, [35, 90].concat(d3.range(305, 700, 50)));
+  var scales = matrix_scales(columns, [35, 80].concat(d3.range(300, 670, 45)));
   var entries = build_entries(document_term, columns);
 
   var dtm_elem = elem.append("g")
@@ -1114,7 +1114,7 @@ function microbiome_application() {
   img_elem.append("img")
     .attrs({
       "src": "microbiome_application.png",
-      "width": 850
+      "width": 550
     })
     .style("position", "absolute")
     .style("left", "80px")
@@ -1137,7 +1137,7 @@ function conclusion1() {
     .append("img")
     .attrs({
       "src": "bacteria_cartoon.JPG",
-      "width": "1000px"
+      "width": "800px"
     });
 
   d3.select("#content")
